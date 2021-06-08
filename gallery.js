@@ -21,9 +21,17 @@ refs.modal.addEventListener('click', closeLightbox);
 
 function galleryEl ({preview, original, description}){
     return  `<li class="gallery__item">
-    <a class="gallery__link" href= '${original}'>
-    <img class="gallery__image" src='${preview}' data-source='${original}' alt='${description}'
+    <a 
+    class="gallery__link" 
+    href= '${original}'
+    >
+    <img 
+    class="gallery__image" 
+    src='${preview}' 
+    data-source='${original}' 
+    alt='${description}'
     />
+    </a>
 </li>
 `;
 };
@@ -41,7 +49,6 @@ window.addEventListener('keyup', clickKey);
 };
 
 function onClickHandlerClose(evt) {
-preventDefault(); 
     refs.lightbox.classList.remove('is-open');
     refs.lightbox__image.src = '';
     refs.lightbox__image.alt = '';
